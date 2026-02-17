@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #0f1020, #05050c);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* 3D Scene */
+.scene {
+    perspective: 1000px;
+}
+
+/* 3D Card */
+.card {
+    background: linear-gradient(145deg, #2a2a5a, #14142b);
+    padding: 40px;
+    width: 360px;
+    border-radius: 20px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.7);
+}
+
+/* Hover = 3D */
+.card:hover {
+    transform: rotateX(15deg) rotateY(-15deg) scale(1.05);
+    box-shadow:
+        0 45px 90px rgba(0,0,0,0.9);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 26px;
+    background: linear-gradient(90deg, #00f2ff, #7b2cff);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
